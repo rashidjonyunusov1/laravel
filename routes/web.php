@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,16 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/about',function(){
-    return view('about');
-})->name('about');
+Route::get('/',[PagesController::class, 'welcome'])->name('welcome');
+Route::get('/about/{a}/{b}/{c}',[PagesController::class, 'about'])->name('about');
 
-Route::get('/contact',function(){
-    return view('contact');
-})->name('contact');
+Route::get('/contact',[PagesController::class, 'contact'])->name('contact');
 //Admin Pages
 Route::prefix('admin/')->name('admin.')->group(function(){
     // 1
