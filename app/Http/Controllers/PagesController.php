@@ -6,23 +6,57 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function welcome(){
-        return view('welcome');
-    }
-    public function about($a, $b, $c){
-      if($a < $b and $b < $c){
-        $num1 = $a * 2;
-        $num2 = $b * 2;
-        $num3 = $c * 2;
-      }else{
-        $num1 = $a * -1;
-        $num2 = $b * -1;
-        $num3 = $c * -1;
-      }
-        return view('about', compact('num1','num2','num3'));
+    // public function welcome(){
+    //     return view('welcome');
+    // }
+    // public function about($a, $b, $c){
+    //   if($a < $b and $b < $c){
+    //     $num1 = $a * 2;
+    //     $num2 = $b * 2;
+    //     $num3 = $c * 2;
+    //   }else{
+    //     $num1 = $a * -1;
+    //     $num2 = $b * -1;
+    //     $num3 = $c * -1;
+    //   }
+    //     return view('about', compact('num1','num2','num3'));
 
+    // }
+    // public function contact(){
+    //     return view('contact');
+    // }
+    //ADMIN PAGES
+    public function index() {
+        return view('admin.index');
     }
-    public function contact(){
-        return view('contact');
+    public function about(){
+        return view('admin.about');
     }
+    public function contact() {
+        return view('admin.contact');
+    }
+    public function product() {
+        return view('admin.product');
+    }
+    public function services() {
+        return view('admin.services');      
+    }
+    public function like() {
+        return view('admin.like');
+    }
+    public function messages() {
+        return view('admin.messages');
+    }
+    public function profile() {
+        return view('admin.profile');
+    }
+    public function money() {
+        return view('admin.money');
+    }
+    public function date() {
+        return view('admin.date');
+    }
+
+    // CLIENT PAGES
+    
 }

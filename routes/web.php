@@ -22,45 +22,25 @@ Route::get('/contact',[PagesController::class, 'contact'])->name('contact');
 //Admin Pages
 Route::prefix('admin/')->name('admin.')->group(function(){
     // 1
-    Route::get('index', function () {
-        return view('admin.index');
-    })->name('index');
+    Route::get('index',[PagesController::class, 'index'])->name('index');
     // 2
-    Route::get('about',function(){
-        return view('admin.about');
-    })->name('about');
+    Route::get('about',[PagesController::class, 'about'])->name('about');
     // 3
-    Route::get('contact',function(){
-        return view('admin.contact');
-    })->name('contact');
+    Route::get('contact',[PagesController::class, 'contact'])->name('contact');
     // 4
-    Route::get('product', function () {
-        return view('admin.product');
-    })->name('product');
+    Route::get('product',[PagesController::class, 'product'])->name('product');
     // 5
-    Route::get('services',function(){
-        return view('admin.services');
-    })->name('services');
+    Route::get('services',[PagesController::class, 'services'])->name('services');
     // 6
-    Route::get('like', function() {
-        return view('admin.like');
-    })->name('like');
+    Route::get('like', [PagesController::class, 'like'])->name('like');
     // 7
-    Route::get('messages', function() {
-        return view('admin.messages');
-    })->name('messages');
+    Route::get('messages',[PagesController::class, 'messages'])->name('messages');
     // 8
-    Route::get('profile', function() {
-        return view('admin.profile');
-    })->name('profile');
+    Route::get('profile',[PagesController::class, 'profile'])->name('profile');
     // 9
-    Route::get('money', function() {
-        return view('admin.money');
-    })->name('money');
+    Route::get('money',[PagesController::class, 'money'])->name('money');
     // 10
-    Route::get('date', function() {
-        return view('admin.date');
-    })->name('date');
+    Route::get('date',[PagesController::class, 'date'])->name('date');
 });
 //Client Pages
 Route::prefix('client/')->name('client.')->group(function(){

@@ -2321,7 +2321,7 @@
             "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/http-client.git",
+                "url": "https://github.com/php-fig/http-client.client_git",
                 "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
             },
             "dist": {
