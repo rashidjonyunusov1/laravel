@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MenegerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,158 +26,99 @@ Route::get('/contact',[PagesController::class, 'contact'])->name('contact');
 //Admin Pages
 Route::prefix('admin/')->name('admin.')->group(function(){
     // 1
-    Route::get('index',[PagesController::class, 'index'])->name('index');
+    Route::get('index',[AdminController::class, 'index'])->name('index');
     // 2
-    Route::get('about',[PagesController::class, 'about'])->name('about');
+    Route::get('about',[AdminController::class, 'about'])->name('about');
     // 3
-    Route::get('contact',[PagesController::class, 'contact'])->name('contact');
+    Route::get('contact',[AdminController::class, 'contact'])->name('contact');
     // 4
-    Route::get('product',[PagesController::class, 'product'])->name('product');
+    Route::get('product',[AdminController::class, 'product'])->name('product');
     // 5
-    Route::get('services',[PagesController::class, 'services'])->name('services');
+    Route::get('services',[AdminController::class, 'services'])->name('services');
     // 6
-    Route::get('like', [PagesController::class, 'like'])->name('like');
+    Route::get('like', [AdminController::class, 'like'])->name('like');
     // 7
-    Route::get('messages',[PagesController::class, 'messages'])->name('messages');
+    Route::get('messages',[AdminController::class, 'messages'])->name('messages');
     // 8
-    Route::get('profile',[PagesController::class, 'profile'])->name('profile');
+    Route::get('profile',[AdminController::class, 'profile'])->name('profile');
     // 9
-    Route::get('money',[PagesController::class, 'money'])->name('money');
+    Route::get('money',[AdminController::class, 'money'])->name('money');
     // 10
-    Route::get('date',[PagesController::class, 'date'])->name('date');
+    Route::get('date',[AdminController::class, 'date'])->name('date');
 });
 //Client Pages
 Route::prefix('client/')->name('client.')->group(function(){
-    
-    Route::get('index', function () {
-        return view('client.index');
-    })->name('index');
-
-    Route::get('like', function () {
-        return view('client.like');
-    })->name('like');
-
-    Route::get('messages', function () {
-        return view('client.messages');
-    })->name('messages');
-
-    Route::get('money', function () {
-        return view('client.money');
-    })->name('money');
-
-    Route::get('product', function () {
-        return view('client.product');
-    })->name('product');
-
-    Route::get('profile', function () {
-        return view('client.profile');
-    })->name('profile');
-
-    Route::get('services', function () {
-        return view('client.services');
-    })->name('services');
-
-    Route::get('about', function () {
-        return view('client.about');
-    })->name('about');
-
-    Route::get('contact', function () {
-        return view('client.contact');
-    })->name('contact');
-
-    Route::get('date', function () {
-        return view('client.date');
-    })->name('date');
+        // 1
+        Route::get('index',[ClientController::class, 'index'])->name('index');
+        // 2
+        Route::get('about',[ClientController::class, 'about'])->name('about');
+        // 3
+        Route::get('contact',[ClientController::class, 'contact'])->name('contact');
+        // 4
+        Route::get('product',[ClientController::class, 'product'])->name('product');
+        // 5
+        Route::get('services',[ClientController::class, 'services'])->name('services');
+        // 6
+        Route::get('like', [ClientController::class, 'like'])->name('like');
+        // 7
+        Route::get('messages',[ClientController::class, 'messages'])->name('messages');
+        // 8
+        Route::get('profile',[ClientController::class, 'profile'])->name('profile');
+        // 9
+        Route::get('money',[ClientController::class, 'money'])->name('money');
+        // 10
+        Route::get('date',[ClientController::class, 'date'])->name('date');
 });
 
 // Meneger Pages
 
 Route::prefix('meneger/')->name('meneger.')->group(function(){
     
-    Route::get('index', function () {
-        return view('meneger.index');
-    })->name('index');
-
-    Route::get('like', function () {
-        return view('meneger.like');
-    })->name('like');
-
-    Route::get('messages', function () {
-        return view('meneger.messages');
-    })->name('messages');
-
-    Route::get('money', function () {
-        return view('meneger.money');
-    })->name('money');
-
-    Route::get('product', function () {
-        return view('meneger.product');
-    })->name('product');
-
-    Route::get('profile', function () {
-        return view('meneger.profile');
-    })->name('profile');
-
-    Route::get('services', function () {
-        return view('meneger.services');
-    })->name('services');
-
-    Route::get('about', function () {
-        return view('meneger.about');
-    })->name('about');
-
-    Route::get('contact', function () {
-        return view('meneger.contact');
-    })->name('contact');
-
-    Route::get('date', function () {
-        return view('meneger.date');
-    })->name('date');
+         // 1
+         Route::get('index',[MenegerController::class, 'index'])->name('index');
+         // 2
+         Route::get('about',[MenegerController::class, 'about'])->name('about');
+         // 3
+         Route::get('contact',[MenegerController::class, 'contact'])->name('contact');
+         // 4
+         Route::get('product',[MenegerController::class, 'product'])->name('product');
+         // 5
+         Route::get('services',[MenegerController::class, 'services'])->name('services');
+         // 6
+         Route::get('like', [MenegerController::class, 'like'])->name('like');
+         // 7
+         Route::get('messages',[MenegerController::class, 'messages'])->name('messages');
+         // 8
+         Route::get('profile',[MenegerController::class, 'profile'])->name('profile');
+         // 9
+         Route::get('money',[MenegerController::class, 'money'])->name('money');
+         // 10
+         Route::get('date',[MenegerController::class, 'date'])->name('date');
 });
 
 // User Pages
 
 Route::prefix('user/')->name('user.')->group(function(){
-    
-    Route::get('index', function () {
-        return view('user.index');
-    })->name('index');
-
-    Route::get('like', function () {
-        return view('user.like');
-    })->name('like');
-
-    Route::get('messages', function () {
-        return view('user.messages');
-    })->name('messages');
-
-    Route::get('money', function () {
-        return view('user.money');
-    })->name('money');
-
-    Route::get('product', function () {
-        return view('user.product');
-    })->name('product');
-
-    Route::get('profile', function () {
-        return view('user.profile');
-    })->name('profile');
-
-    Route::get('services', function () {
-        return view('user.services');
-    })->name('services');
-
-    Route::get('about', function () {
-        return view('user.about');
-    })->name('about');
-
-    Route::get('contact', function () {
-        return view('user.contact');
-    })->name('contact');
-
-    Route::get('date', function () {
-        return view('user.date');
-    })->name('date');
+         // 1
+         Route::get('index',[UserController::class, 'index'])->name('index');
+         // 2
+         Route::get('about',[UserController::class, 'about'])->name('about');
+         // 3
+         Route::get('contact',[UserController::class, 'contact'])->name('contact');
+         // 4
+         Route::get('product',[UserController::class, 'product'])->name('product');
+         // 5
+         Route::get('services',[UserController::class, 'services'])->name('services');
+         // 6
+         Route::get('like', [UserController::class, 'like'])->name('like');
+         // 7
+         Route::get('messages',[UserController::class, 'messages'])->name('messages');
+         // 8
+         Route::get('profile',[UserController::class, 'profile'])->name('profile');
+         // 9
+         Route::get('money',[UserController::class, 'money'])->name('money');
+         // 10
+         Route::get('date',[UserController::class, 'date'])->name('date');
 });
 
 
