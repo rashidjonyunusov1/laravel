@@ -68,6 +68,7 @@
                 <h1 class="mb-4">So'nggi maqolalar</h1>
             </div>
             @include('sections.blogs')
+            @include('sections.blogs')
         </div>
       </div>
   
