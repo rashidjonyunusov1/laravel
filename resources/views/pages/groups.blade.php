@@ -1,5 +1,8 @@
 @extends('layouts.main')
 
+@section('group')
+    
+@endsection
 @section('content')
 
 <!-- Header Start -->

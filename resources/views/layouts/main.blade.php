@@ -44,14 +44,14 @@
             
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
-                    <a href="{{ route('welcome')}}" class="nav-item nav-link active">Bosh sahifa</a>
+                    <a href="{{ route('welcome')}}" class="nav-item nav-link @yield('home')">Bosh sahifa</a>
                     <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
-                    <a href="{{ route('pages.groups') }}" class="nav-item nav-link">Sinflar</a>
-                    <a href="{{ route('pages.team') }}" class="nav-item nav-link">O'qituvchilar</a>
-                    <a href="{{ route('pages.achievements')}}" class="nav-item nav-link ">Yutuqlar</a>
-                    <a href="{{ route('pages.gallary')}}" class="nav-item nav-link">Galereya</a>
-                    <a href="{{ route('pages.blog')}}" class="nav-item nav-link">Maqolalar</a>
-                    <a href="{{ route('pages.contact')}}" class="nav-item nav-link">Aloqa</a>
+                    <a href="{{ route('pages.groups') }}" class="nav-item nav-link @yield('group')">Sinflar</a>
+                    <a href="{{ route('pages.team') }}" class="nav-item nav-link @yield('teacher')">O'qituvchilar</a>
+                    <a href="{{ route('pages.achievements')}}" class="nav-item nav-link @yield('achievement') ">Yutuqlar</a>
+                    <a href="{{ route('pages.gallary')}}" class="nav-item nav-link @yield('gallary')">Galereya</a>
+                    <a href="{{ route('pages.blog')}}" class="nav-item nav-link @yield('blog')">Maqolalar</a>
+                    <a href="{{ route('pages.contact')}}" class="nav-item nav-link @yield('contact')">Aloqa</a>
                 </div>
                 </div> 
                 <a class="btn btn-primaryy px-4" href="Uzb"><img style="padding: 3px;" src="/assets/img/Uzbekistan-Flag-icon.png" width="35" height="35" alt="lorem"></a>

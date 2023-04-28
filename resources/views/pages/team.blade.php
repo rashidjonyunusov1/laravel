@@ -1,4 +1,7 @@
  @extends('layouts.main')
+ @section('teacher')
+     
+ @endsection
  @section('content')
  <!-- Header Start -->
  <div class="container-fluid bg-primary mb-5">

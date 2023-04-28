@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 // use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PagesController;
+
 // use App\Http\Controllers\ClientController;
 // use App\Http\Controllers\UserController;
 // use App\Http\Controllers\MenegerController;
@@ -18,7 +20,6 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
     Route::get('/', [AdminController::class, 'welcome'])->name('welcome');
     Route::prefix('pages/')->name('pages.')->group(function(){
 
@@ -30,6 +31,10 @@ use App\Http\Controllers\AdminController;
     Route::get('team/', [AdminController::class, 'team'])->name('team');
     Route::get('contact/', [AdminController::class, 'contact'])->name('contact');
     
+
+
+    Route::post('order/store', [PagesController::class, 'store'])->name('order.store');
+
 });
 
 

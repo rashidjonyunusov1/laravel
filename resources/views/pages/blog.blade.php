@@ -1,4 +1,7 @@
   @extends('layouts.main')
+  @section('blog')
+      
+  @endsection
   @section('content')
   
   <!-- Header Start -->
