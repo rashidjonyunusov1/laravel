@@ -33,7 +33,7 @@ public function article() {
 
 public function achievements() {
   return view('meneger.index');
-} 
+}
  
  public function store(Request $request){   
   DB::table('orders')->insert([

@@ -21,6 +21,7 @@
                     </div>
                     <div class="card-body rounded-bottom bg-primary p-5">
                         <form method="POST" action="{{route('pages.order.store')}}">
+                            
                             @csrf
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control border-0 p-4" placeholder="Ismingiz" required="required" />

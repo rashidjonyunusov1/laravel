@@ -45,8 +45,8 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="{{ route('welcome')}}" class="nav-item nav-link @yield('home')">Bosh sahifa</a>
-                    <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
-                    <a href="{{ route('pages.groups') }}" class="nav-item nav-link @yield('group')">Sinflar</a>
+                    {{-- <a href="{{ route('pages.views')}}" class="nav-item nav-link">View</a> --}}
+                    <a href="{{ route('pages.groups') }}" class="nav-item nav-link @yield('group')">Sinflar</a> 
                     <a href="{{ route('pages.team') }}" class="nav-item nav-link @yield('teacher')">O'qituvchilar</a>
                     <a href="{{ route('pages.achievements')}}" class="nav-item nav-link @yield('achievement') ">Yutuqlar</a>
                     <a href="{{ route('pages.gallary')}}" class="nav-item nav-link @yield('gallary')">Galereya</a>
