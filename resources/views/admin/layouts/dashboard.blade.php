@@ -1,4 +1,7 @@
 @extends('admin.layouts.main')
+@section('dashboard')
+    active
+@endsection
 @section('content')
 
 	<!-- MAIN -->

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('gallary')
-    
+    active
 @endsection
 @section('content')
 <!-- Header Start -->

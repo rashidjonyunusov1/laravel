@@ -1,4 +1,7 @@
 @extends('admin.layouts.main')
+@section('infos')
+active
+@endsection
 @section('content')
 
 	<!-- MAIN -->
@@ -17,6 +20,9 @@
                             <th>#</th>
                             <th>Title</th>
                             <th>Description</th>
+                            <th>Image</th>
+                            <th>Data</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,11 +32,27 @@
                         <tr>
                             <td>{{ ++$loop->index }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->description }}</td>
+                            <td>{{ \Str::limit($item->description,20) }}</td>
+                            <td><img src="/icons/{{$item->icon}}" width="40px"></td>
+                            <td>{{ $item->created_at }}</td>
+                            <td>
+
+                                <form method="POST" action="{{ route('admin.infos.destroy', $item->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <a class="btn btn-primary" href="{{ route('admin.infos.show', $item->id) }}"><ion-icon name="eye-outline"></ion-icon></a>
+                                    <a class="btn btn-primary" href="{{ route('admin.infos.edit', $item->id) }}"><ion-icon name="create-outline"></ion-icon></a>
+
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Do you want to delete ?')"><ion-icon name="trash-outline"></ion-icon></button>
+
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
+                {{ $infos->links() }}
             </div>
            
         </div>

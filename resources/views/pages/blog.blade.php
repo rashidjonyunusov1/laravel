@@ -1,6 +1,6 @@
   @extends('layouts.main')
   @section('blog')
-      
+      active
   @endsection
   @section('content')
   

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('group')
-    
+    active
 @endsection
 @section('content')
 

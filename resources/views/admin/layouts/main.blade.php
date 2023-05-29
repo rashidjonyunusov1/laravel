@@ -6,6 +6,7 @@
 
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
 	<!-- My CSS -->
 	<link rel="stylesheet" href="/admin/style.css">
 
@@ -21,55 +22,55 @@
 			<span class="text">AdminHub</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
+			<li class="@yield('dashboard')">
+				<a href="{{route('admin.dashboard')}}">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Infos</span>
+			<li class=" @yield('infos')">
+				<a href="{{route('admin.infos.index')}}">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text @yield('infos')">Infos</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li class="@yield('groups')">
+				<a href="{{route('admin.groups.index')}}">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Groups</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li class="@yield('teachers')">
+				<a href="{{route('admin.teachers.index')}}">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Teachers</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
+			<li class="@yield('comments')">
+				<a href="{{route('admin.comments.index')}}">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Comments</span>
 				</a>
 			</li>
-            <li>
+            <li class="@yield('Complaints')">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
-					<span class="text">Categories</span>
+					<span class="text">Complaints</span>
 				</a>
 			</li>
-            <li>
-				<a href="#">
+            <li class="@yield('blogs')">
+				<a href="{{route('admin.blogs.index')}}">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Blogs</span>
 				</a>
 			</li>
-            <li>
+            <li class="@yield('wins')">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Wins</span>
 				</a>
 			</li>
-            <li>
+            <li class="@yield('photos')">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Photos</span>
@@ -124,7 +125,7 @@
 	</section>
 	<!-- CONTENT -->
 	
-
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 	<script src="/admin/script.js"></script>
 </body>
-</html>
+</html>	

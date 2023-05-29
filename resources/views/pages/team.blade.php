@@ -1,6 +1,6 @@
  @extends('layouts.main')
  @section('teacher')
-     
+     active
  @endsection
  @section('content')
  <!-- Header Start -->

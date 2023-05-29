@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('contact')
-    
+    active
 @endsection
 @section('content')
 <br><br><br><br><br><br>

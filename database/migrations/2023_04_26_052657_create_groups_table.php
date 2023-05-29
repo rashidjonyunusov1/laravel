@@ -17,7 +17,7 @@ class CreateGroupsTable extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('name');
-            $table->text('discription');
+            $table->text('description');
             $table->string('age')->nullable();
             $table->integer('seat')->default(5);
             $table->string('time')->nullable();

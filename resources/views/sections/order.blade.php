@@ -27,7 +27,7 @@
                                 <input type="text" name="name" class="form-control border-0 p-4" placeholder="Ismingiz" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="number" name="phone" class="form-control border-0 p-4" placeholder="Telefon raqamingiz" required="required" />
+                                <input type="number" name="phone_number" class="form-control border-0 p-4" placeholder="Telefon raqamingiz" required="required" />
                             </div>
                             <div class="form-group">
                                 <input type="text" name="group" class="form-control border-0 p-4" placeholder="Guruh tanlang" required="required" />
