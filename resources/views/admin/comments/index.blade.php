@@ -31,7 +31,7 @@
                         
                         <tr>
                             <td>{{ ++$loop->index }}</td>
-                            <td>{{ $item->name }}</td>
+                            <td>{{ \Str::limit($item->name, 15) }}</td>
                             <td>{{ \Str::limit($item->description,20) }}</td>
                             <td>{{ $item->jobs }}</td>
                             <td><img src="/comments_img/{{$item->image}}" width="40px"></td>

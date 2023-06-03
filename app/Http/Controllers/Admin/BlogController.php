@@ -24,6 +24,7 @@ class BlogController extends Controller
 
     public function store(Request $request, Blog $blog)
     {
+
         $requestData = $request->all();
 
         if($request->hasFile('image'))
@@ -31,6 +32,8 @@ class BlogController extends Controller
           $requestData['image'] = $this->file_upload();
         }
         Blog::create($requestData);
+//   dd ($request);
+
         return redirect()->route('admin.blogs.index');
     }
 

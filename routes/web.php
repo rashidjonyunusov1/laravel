@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\InfoController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\NumberController;
+use App\Http\Controllers\Admin\HumanController;
 use App\Http\Controllers\PagesController;
 
 /*
@@ -53,6 +55,10 @@ Route::prefix('admin/')->name('admin.')->group(function(){
  Route::resource('comments', CommentController::class);
 
  Route::resource('blogs', BlogController::class);
+
+ Route::resource('numbers', NumberController::class);
+
+ Route::resource('humans', HumanController::class);
 });
 
 

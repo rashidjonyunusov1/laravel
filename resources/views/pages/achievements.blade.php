@@ -22,10 +22,10 @@
   <div class="container">
       <div class="text-center pb-2">
           <p class="section-title px-5"><span class="px-2">Bog'cha hayoti</span></p>
-          <h1 class="mb-4">So'nggi maqolalar</h1>
+          <h1 class="mb-4">So'nggi Yutuqlar</h1>
       </div>
-      @include('sections.blogs')
-      @include('sections.blogs')
+      @include('sections.achievements')
+      @include('sections.achievements')
 
   </div>
 </div>

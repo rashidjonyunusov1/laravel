@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpKernel\DataCollector\RequestDataCollector;
 
 class CommentController extends Controller
@@ -29,7 +30,7 @@ class CommentController extends Controller
             $requestData['image'] = $this->file_upload();    
         }
         Comment::create($requestData);
-        return redirect()->route('admin.comments.index', compact('comment'));
+        return redirect()->route('admin.comments.index');
     }
 
     public function show(Comment $comment)

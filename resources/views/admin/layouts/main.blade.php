@@ -34,6 +34,18 @@
 					<span class="text @yield('infos')">Infos</span>
 				</a>
 			</li>
+			<li class="@yield('numbers')">
+				<a href="{{route('admin.numbers.index')}}">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Numbers</span>
+				</a>
+			</li>
+			<li class="@yield('humans')">
+				<a href="{{route('admin.humans.index')}}">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Humans</span>
+				</a>
+			</li>
 			<li class="@yield('groups')">
 				<a href="{{route('admin.groups.index')}}">
 					<i class='bx bxs-doughnut-chart' ></i>

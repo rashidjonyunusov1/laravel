@@ -17,7 +17,8 @@ class InfoController extends Controller
     }
 
     public function create(){
-        return view('admin.infos.create');
+        if (Info::count() >= 3) 
+        return redirect()->route('admin.infos.index')->with('warning', 'Malumot yetarli');
     }
 
     public function store(Request $request)
@@ -29,7 +30,8 @@ class InfoController extends Controller
           $requestData['icon'] = $this->file_upload();
         }
         Info::create($requestData);
-        return redirect()->route('admin.infos.index');
+        // return redirect()->route('admin.infos.index');
+        return redirect()->route('admin.infos.index')->with('success','Successfully added');
     }
     public function show(Info $info){
 
@@ -57,7 +59,8 @@ class InfoController extends Controller
 
         $info->update($requestData);
 
-        return redirect()->route('admin.infos.index');
+        // return redirect()->route('admin.infos.index');
+        return redirect()->route('admin.infos.index')->with('success','Successfully Update');
     }
 
     public function destroy(Info $info)
@@ -68,8 +71,8 @@ class InfoController extends Controller
         }
 
        $info->delete();
-        
-        return redirect()->route('admin.infos.index');
+       return redirect()->route('admin.infos.index')->with('warning','Successfully Delete');
+        // return redirect()->route('admin.infos.index');
     }
 
     public function file_upload(){

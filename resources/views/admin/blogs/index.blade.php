@@ -32,8 +32,8 @@ active
                         
                         <tr>
                             <td>{{ ++$loop->index }}</td>
-                            <td>{{ $item->name }}</td>
-                            <td>{{ $item->title }}</td>
+                            <td>{{ \Str::limit($item->name,10) }}</td>
+                            <td>{{ \Str::limit($item->title,10) }}</td>
                             <td>{{ \Str::limit($item->description,20) }}</td>
                             <td><img src="/blog_img/{{$item->image}}" width="40px"></td>
                             <td>{{ $item->created_at }}</td>

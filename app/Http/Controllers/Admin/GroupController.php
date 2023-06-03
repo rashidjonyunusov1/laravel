@@ -16,9 +16,10 @@ class GroupController extends Controller
         return view('admin.groups.index', compact('groups'));
     }
 
-    public function create()
-    {
-        return view('admin.groups.create');
+    public function create(){
+    if (Group::count() >= 3) 
+
+        return redirect()->route('admin.groups.create')->with('warning', 'Malumot yetarli');
     }
     public function store(Request $request, Group $group)
     {
@@ -29,7 +30,7 @@ class GroupController extends Controller
             $requestData['image'] = $this->file_upload();    
         }
         Group::create($requestData);
-        return redirect()->route('admin.groups.index');
+        return redirect()->route('admin.groups.index')->with('success','Successfully added');
     }
 
     public function show(Group $group)
@@ -57,7 +58,7 @@ class GroupController extends Controller
 
         $group->update($requestData);
 
-        return redirect()->route('admin.groups.index');
+        return redirect()->route('admin.groups.index')->with('success','Successfully Update');
     }
 
     public function destroy(Group $group)
