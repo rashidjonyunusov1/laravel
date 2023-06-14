@@ -9,7 +9,7 @@
                     <img src="/icons/{{ $item->icon }}" width="50px" alt="">
                     <div class="pl-4">
                         <h4>{{ $item->name }}</h4>
-                        <p class="m-0">{{ $item->description }}</p>
+                        <p class="m-0">{{ \Str::limit($item->description,20) }}</p>
                     </div>
                 </div>
             </div>

@@ -20,8 +20,8 @@
                         <input type="text" name="name" class="form-control"> <br>
 
                         <strong> Description :</strong>
-                        <input type="text" name="description" class="form-control"> <br>
-
+                        <textarea type="text" value="{{ old('description') }}" name="description" class="form-control ckeditor"> 
+                        </textarea><br>
                         <strong> Rasm(png yoki jpg) :</strong>
                         <input type="file" name="icon" class="form-control"> <br>
 
@@ -33,5 +33,12 @@
             </div>
         </main>
         <!-- MAIN -->
+
+        <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('.ckeditor').ckeditor();
+            });
+        </script>
 
 @endsection

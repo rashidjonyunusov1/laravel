@@ -40,7 +40,7 @@ active
                         <tr>
                             <td>{{ ++$loop->index }}</td>
                             <td>{{ $item->number }}</td>
-                            <td>{{ $item->human->name ?? 'Bog`lanmagan'}}</td>
+                            <td>{{ $item->name ?? 'Bog`lanmagan'}}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>
 

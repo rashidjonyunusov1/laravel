@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\AuditEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Info;
 use Illuminate\Http\Request;
@@ -19,6 +20,8 @@ class InfoController extends Controller
     public function create(){
         if (Info::count() >= 3) 
         return redirect()->route('admin.infos.index')->with('warning', 'Malumot yetarli');
+
+        return view('admin.infos.create');
     }
 
     public function store(Request $request)
@@ -30,7 +33,10 @@ class InfoController extends Controller
           $requestData['icon'] = $this->file_upload();
         }
         Info::create($requestData);
-        // return redirect()->route('admin.infos.index');
+
+        $user = auth()->user()->name;
+        event(new AuditEvent($user, 'infos', 'add', $requestData));
+
         return redirect()->route('admin.infos.index')->with('success','Successfully added');
     }
     public function show(Info $info){

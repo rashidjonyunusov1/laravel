@@ -17,9 +17,12 @@ class GroupController extends Controller
     }
 
     public function create(){
-    if (Group::count() >= 3) 
+        
+        if (Group::count() >= 3) 
+        // return 1;
+        return redirect()->route('admin.groups.index')->with('warning', 'Malumot yetarli');
 
-        return redirect()->route('admin.groups.create')->with('warning', 'Malumot yetarli');
+        return view('admin.groups.create');
     }
     public function store(Request $request, Group $group)
     {

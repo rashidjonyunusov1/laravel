@@ -27,7 +27,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Number</th>
+                        {{-- <th>Number</th> --}}
                         <th>Data</th>
                         <th>Action</th>
                     </tr>
@@ -37,7 +37,7 @@
                         <tr>
                             <td>{{ ++$loop->index }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->number->number ?? 'Bog`lanmagan'}}</td>
+                            {{-- <td>{{ $item->number->number ?? 'Bog`lanmagan'}}</td> --}}
 
                             <td>{{ $item->created_at }}</td>
                             <td>

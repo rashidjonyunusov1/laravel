@@ -12,7 +12,7 @@ class Human extends Model
     protected $guarded = [];
 
     
-    public function number(){
-        return $this->belongsTo(Number::class);
+    public function numbers(){
+        return $this->hasMany(Number::class);
     }
 }

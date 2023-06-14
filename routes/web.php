@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\NumberController;
 use App\Http\Controllers\Admin\HumanController;
+use App\Http\Controllers\Admin\DistrictController;
+use App\Http\Controllers\Admin\RegionController;
 use App\Http\Controllers\PagesController;
 
 /*
@@ -46,19 +48,18 @@ Route::prefix('admin/')->name('admin.')->group(function(){
         return view('admin.layouts.dashboard');
     })->name('dashboard');
 
- Route::resource('infos', InfoController::class);
+ Route::resource(
+    ['infos' => InfoController::class,
+    'groups', GroupController::class,
+    'teachers',TeacherController::class,
+    'comments', CommentController::class,
+    'blogs', BlogController::class,
+    'numbers', NumberController::class,
+    'humans', HumanController::class,
+    'districts', DistrictController::class,
+    'regions', RegionController::class,
+]);
 
- Route::resource('groups', GroupController::class);
- 
- Route::resource('teachers',TeacherController::class);
-
- Route::resource('comments', CommentController::class);
-
- Route::resource('blogs', BlogController::class);
-
- Route::resource('numbers', NumberController::class);
-
- Route::resource('humans', HumanController::class);
 });
 
 

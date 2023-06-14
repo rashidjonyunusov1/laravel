@@ -64,6 +64,18 @@
 					<span class="text">Comments</span>
 				</a>
 			</li>
+			{{-- <li class="@yield('regions')">
+				<a href="{{route('admin.regions.index')}}">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Regions</span>
+				</a>
+			</li>
+			<li class="@yield('districts')">
+				<a href="{{route('admin.districts.index')}}">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Districts</span>
+				</a>
+			</li> --}}
             <li class="@yield('Complaints')">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
